@@ -95,7 +95,7 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="ITMidt Add-in"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="SPAM"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Oii"/>
       
       </bt:ShortStrings>
       <bt:LongStrings>
