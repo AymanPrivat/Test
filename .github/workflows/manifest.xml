@@ -4,7 +4,7 @@
   <Version>1.0.0.0</Version>
   <ProviderName>ITMidt-Ayman</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="SPAM"/>
+  <DisplayName DefaultValue="Oii"/>
   <Description DefaultValue="Rapporter en sak dersom du mistenker at har fått en spam"/>
   <IconUrl DefaultValue="https://raw.githubusercontent.com/AymanPrivat/Test/main/.github/workflows/64.png"/>
   <HighResolutionIconUrl DefaultValue="https://raw.githubusercontent.com/AymanPrivat/Test/main/.github/workflows/64.png"/>
