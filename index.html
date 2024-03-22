@@ -20,12 +20,11 @@
 <body class="ms-font-m ms-welcome ms-Fabric">
     <header class="ms-welcome__header ms-bgColor-neutralLighter">
         <img width="90" height="90" src="https://raw.githubusercontent.com/AymanPrivat/Test/main/.github/workflows/80.png" alt="ITMidt-Ayman" title="ITMidt-Ayman" />
-        <h1 class="ms-font-su">ITMidt</h1>
+        <h1 class="ms-font-su">Oii! Har du fått en spam epost?</h1>
     </header>
     <section id="sideload-msg" class="ms-welcome__main">
-        <h2 class="ms-font-xl"> Meld en sak <a target="_blank" href="https://hjelp.itmidt.no">her</a></h2>
-        <button onclick="meldSak()">Meld en sak</button>
-        <button onclick="lesMer()">Les mer</button>
+        <button onclick="window.location.href = 'https://hjelp.itmidt.no'">Meld en sak</button>
+        <button onclick="window.location.href = 'https://itmidt.sharepoint.com/sites/Support/SitePages/Hvordan-avdekke-svindel-e-post.aspx'">Les mer</button>
     </section>
     
     <!-- Skript for knappfunksjonalitet -->
@@ -33,11 +32,13 @@
         function meldSak() {
             // Legg til logikk for å behandle knappetrykk for å melde en sak her
             console.log("Meld en sak-knapp trykket");
+            window.location.href = 'https://hjelp.itmidt.no';
         }
 
         function lesMer() {
             // Legg til logikk for å behandle knappetrykk for å lese mer her
             console.log("Les mer-knapp trykket");
+            window.location.href = 'https://itmidt.sharepoint.com/sites/Support/SitePages/Hvordan-avdekke-svindel-e-post.aspx';
         }
     </script>
 </body>
