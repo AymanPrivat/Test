@@ -23,7 +23,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://raw.githubusercontent.com/AymanPrivat/Test/main/.github/workflows/taskpane.html"/>
+        <SourceLocation DefaultValue="https://itmidt.sharepoint.com/sites/Support/SitePages/Hvordan-avdekke-svindel-e-post.aspx"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -76,7 +76,7 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Commands.Url" DefaultValue="https://raw.githubusercontent.com/AymanPrivat/Test/main/.github/workflows/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://raw.githubusercontent.com/AymanPrivat/Test/main/.github/workflows/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://itmidt.sharepoint.com/sites/Support/SitePages/Hvordan-avdekke-svindel-e-post.aspx"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="ITMidt Add-in"/>
