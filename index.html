@@ -1,6 +1,3 @@
-<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
-<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
-
 <!DOCTYPE html>
 <html>
 
@@ -27,8 +24,22 @@
     </header>
     <section id="sideload-msg" class="ms-welcome__main">
         <h2 class="ms-font-xl"> Meld en sak <a target="_blank" href="https://hjelp.itmidt.no">her</a></h2>
+        <button onclick="meldSak()">Meld en sak</button>
+        <button onclick="lesMer()">Les mer</button>
     </section>
     
+    <!-- Skript for knappfunksjonalitet -->
+    <script>
+        function meldSak() {
+            // Legg til logikk for å behandle knappetrykk for å melde en sak her
+            console.log("Meld en sak-knapp trykket");
+        }
+
+        function lesMer() {
+            // Legg til logikk for å behandle knappetrykk for å lese mer her
+            console.log("Les mer-knapp trykket");
+        }
+    </script>
 </body>
 
 </html>
