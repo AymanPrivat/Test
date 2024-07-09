@@ -25,6 +25,7 @@
             margin-top: 20px;
             margin-bottom: 20px;
             font-size: 2.5em;
+            text-align: center;
         }
 
         .ms-welcome__header {
@@ -83,14 +84,16 @@
 
         function meldSak() {
             const item = Office.context.mailbox.item;
-            const subject = "Meld en sak: " + item.subject;
-            const body = "Videresendt e-post: " + item.body;
             
-            // Opprett en ny e-post og sett mottakeren, emne og brødtekst
-            Office.context.mailbox.displayNewMessageForm({
+            item.forward({
                 toRecipients: ["support@itmidt.no"],
-                subject: subject,
-                body: body
+                callback: function (asyncResult) {
+                    if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
+                        console.log("Email forwarded successfully");
+                    } else {
+                        console.error("Failed to forward email: " + asyncResult.error.message);
+                    }
+                }
             });
         }
 
