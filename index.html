@@ -25,6 +25,7 @@
             margin-top: 20px;
             margin-bottom: 20px;
             font-size: 2.5em;
+            text-align: center;
         }
 
         .ms-welcome__header {
@@ -64,14 +65,39 @@
 
 <body class="ms-font-m ms-welcome ms-Fabric">
     <header class="ms-welcome__header ms-bgColor-neutralLighter">
-        <img src="https://raw.githubusercontent.com/AymanPrivat/Test/main/.github/workflows/ITMidtfargestaende.png" alt="ITMidt-Ayman" title="ITMidt-Ayman" />
+        <img src="https://raw.githubusercontent.com/AymanPrivat/Test/main/.github/workflows/80.png" alt="ITMidt-Ayman" title="ITMidt-Ayman" />
         <h1 class="ms-font-su">Oii spam</h1>
     </header>
     <section id="sideload-msg" class="ms-welcome__main">
         <p class="description">Spam er uønsket eller uoppfordret informasjon som sendes over internett, vanligvis i form av e-post. Hvis du har mottatt en spam-e-post, kan du melde saken eller lese mer for å lære hvordan du kan beskytte deg mot svindel.</p>
         <button onclick="window.location.href = 'https://hjelp.itmidt.no'">Meld en sak</button>
         <button onclick="window.location.href = 'https://itmidt.sharepoint.com/sites/Support/SitePages/Hvordan-avdekke-svindel-e-post.aspx'">Les mer</button>
+        <button onclick="videresendEpost()">Videresend epost</button>
     </section>
+    
+    <script>
+        function meldSak() {
+            window.location.href = 'https://hjelp.itmidt.no';
+        }
+
+        function lesMer() {
+            window.location.href = 'https://itmidt.sharepoint.com/sites/Support/SitePages/Hvordan-avdekke-svindel-e-post.aspx';
+        }
+
+        function videresendEpost() {
+            Office.context.mailbox.item.forward({
+                toRecipients: ["sikkerhet@itmidt.no"],
+                subject: "Videresendt spam epost",
+                htmlBody: "<p>Hei,</p><p>Jeg videresender denne e-posten som jeg mistenker er spam.</p>"
+            }, function(asyncResult) {
+                if (asyncResult.status === Office.AsyncResultStatus.Failed) {
+                    console.error(asyncResult.error.message);
+                } else {
+                    console.log("E-posten ble videresendt.");
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
