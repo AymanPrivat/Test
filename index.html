@@ -25,7 +25,6 @@
             margin-top: 20px;
             margin-bottom: 20px;
             font-size: 2.5em;
-            text-align: center;
         }
 
         .ms-welcome__header {
@@ -70,37 +69,9 @@
     </header>
     <section id="sideload-msg" class="ms-welcome__main">
         <p class="description">Spam er uønsket eller uoppfordret informasjon som sendes over internett, vanligvis i form av e-post. Hvis du har mottatt en spam-e-post, kan du melde saken eller lese mer for å lære hvordan du kan beskytte deg mot svindel.</p>
-        <button onclick="meldSak()">Meld en sak</button>
-        <button onclick="lesMer()">Les mer</button>
+        <button onclick="window.location.href = 'https://hjelp.itmidt.no'">Meld en sak</button>
+        <button onclick="window.location.href = 'https://itmidt.sharepoint.com/sites/Support/SitePages/Hvordan-avdekke-svindel-e-post.aspx'">Les mer</button>
     </section>
-    
-    <!-- Skript for knappfunksjonalitet -->
-    <script>
-        Office.onReady(info => {
-            if (info.host === Office.HostType.Outlook) {
-                // Office is ready
-            }
-        });
-
-        function meldSak() {
-            const item = Office.context.mailbox.item;
-            
-            item.forward({
-                toRecipients: ["support@itmidt.no"],
-                callback: function (asyncResult) {
-                    if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
-                        console.log("Email forwarded successfully");
-                    } else {
-                        console.error("Failed to forward email: " + asyncResult.error.message);
-                    }
-                }
-            });
-        }
-
-        function lesMer() {
-            window.location.href = 'https://itmidt.sharepoint.com/sites/Support/SitePages/Hvordan-avdekke-svindel-e-post.aspx';
-        }
-    </script>
 </body>
 
 </html>
